@@ -61,6 +61,11 @@ public class UserController {
         return "redirect:/users";
     }
 
+    @GetMapping("/login")
+    public String login() {
+        return "/user/login";
+    }
+
     @PostMapping("/login")
     public String login(String userId, String password, HttpSession httpSession) {
         try {
